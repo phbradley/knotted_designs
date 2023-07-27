@@ -1,0 +1,73 @@
+-shared_output_tag ./penta_round1
+
+-my:mode unbound_frag
+
+-adjust_ref_weights A 0.5 W 1.5 G 0.5 H 0.5 D 0.25
+
+-limit_aroma_chi2
+-donut_energy_weight 0.5
+-centroid_helixseq LEU ILE ASP SER # LIDS
+
+-allow_file_stealing
+
+-barrel_mode
+-pentafoil_mode
+-old_sym_min
+
+-n_refold 5
+-n_refold_sspred 40
+
+-nrepeats 7 ## actually 5-repeat
+-base_repeat 3 ## until fullatom, then should switch to 2
+
+## default now is to do fragment sequence insertions during centroid sim
+#-fastrelax_before_design
+-freeze_helixseq
+-freeze_centroidseq ### NO SEQMOVES AT ALL DURING CENTROID, SHOULD SPEED THINGS UP A BIT
+
+-design_cycles 2
+-use_softrep_for_design ## unnecessary w/ design_score_function
+
+-score_function input/talaris2014.wts
+-design_score_function input/talaris2014.soft.wts
+-final_round_design_score_function input/talaris2014.wts
+
+
+#-sometimes_break_longer_helix 0.33
+
+-repeatlens 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57
+
+-helix1_len_range 0.25 0.5
+
+-force_helix_capping
+-layer_design
+-layers_file ./input/basic_layers.txt
+
+-turns GBB GBB GBB E BB BAB
+
+-score_filter_acceptance_rate 0.1
+-score_filter_pass_early F
+
+-nstruct 100000
+
+-symmetry_definition stoopid
+
+### NOTE NOTE NOTE NOTE NOTE
+-ex1
+-ex2
+#-ex1aro::level 6
+#-extrachi_cutoff 15
+
+-mute all
+#-run:dry_run
+
+-out::level 550
+-ignore_unrecognized_res
+
+-loops::vall_file ./big_input/vall.dat.pc60_2002-12-27_v01.2.trimmed.gz
+
+-unfolded_sasas input/reference_fully_exposed_sasa_values.txt
+-output_virtual F
+
+
+-database ./big_input/database/

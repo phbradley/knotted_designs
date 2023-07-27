@@ -1,0 +1,59 @@
+-shared_output_tag ./trefoil_round2
+
+-my:mode unbound_frag
+
+-adjust_ref_weights A 0.5 W 1.5 G 0.5 H 0.5 D 0.25
+
+-limit_aroma_chi2
+-donut_energy_weight 0.5
+-centroid_helixseq LEU ILE ASP SER # LIDS
+-freeze_centroidseq
+
+-allow_file_stealing
+
+-barrel_mode
+-trefoil_mode
+-force_helix_capping
+-layer_design
+-layers_file ./input/basic_layers.txt
+-dont_force_first_helix_in
+
+-@resample_bbs input/job26_bbtags.txt
+							
+-base_repeat 3
+
+-n_refold 5
+-n_refold_sspred 40
+
+-freeze_helixseq
+-design_cycles 2
+
+-score_filter_acceptance_rate 0.1
+-score_filter_pass_early F
+
+-use_softrep_for_design ## unnecessary w/ design_score_function
+
+-score_function input/talaris2014.wts
+-design_score_function input/talaris2014.soft.wts
+-final_round_design_score_function input/talaris2014.wts
+
+-nstruct 100000
+
+-symmetry_definition stoopid
+
+-ex1
+-ex2
+#-ex1aro::level 6
+#-extrachi_cutoff 15
+
+-mute all
+
+-out::level 550
+-ignore_unrecognized_res
+
+-loops::vall_file ./big_input/vall.dat.pc60_2002-12-27_v01.2.trimmed.gz
+
+-unfolded_sasas input/reference_fully_exposed_sasa_values.txt
+-database ./big_input/database
+-output_virtual T
+
