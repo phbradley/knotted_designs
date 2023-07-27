@@ -20,12 +20,12 @@ many independent simulations, each several minutes long, to inefficiently explor
 the very large space of structures and sequences. All the calculations described
 in this paper were run on a large computing cluster.
 
-Second, this design code is a bit old (some of the original trefoil simulations date
+Second, this design code is rather old (some of the original trefoil simulations date
 back to 2015), and was written on a branch of the Rosetta package during a time
 of rapid change in the framework for modeling symmetric systems (like these
 tandem repeat proteins). Unfortunately, the code became stranded on this branch
 and was never integrated into the main trunk of Rosetta. For that reason, it's not
-available as a mode of the publicly released modeling package. This means that
+being released as a mode of the publicly released modeling package. This means that
 right now, it's only available as a binary executable (download link below).
 However, Rosetta is currently being transitioned to free open source software, which
 should make it possible to release the code on this branch in a form that
@@ -35,10 +35,13 @@ Third, I wouldn't personally recommend that anyone actually use this design code
 new design calculations, since design methods have advanced so dramatically in the
 past couple of years. The key concept in this paper is very simple: that you can
 get a $(p,q)$ torus-knot backbone by designing a $q$-repeat protein with
-a repeat-repeat rotation angle of $p * 360/ q$ degrees. This would be straightforward to
+a repeat-repeat rotation angle of $(p * 360/ q)$ degrees.
+This would be straightforward to
 implement in some of the modern hallucination- or diffusion-based approaches to
-tandem repeat protein design. Also, we've included a large set (~60k) of
-pre-built trefoil and pentafoil design models in the download below.
+tandem repeat protein design. Also, we've included a large set of
+pre-built trefoil and pentafoil design models (~60k) in the download below,
+for anyone who wants to dig in. It would take many hours of cluster computing
+to regenerate those pre-built models.
 
 # Repository contents:
 
