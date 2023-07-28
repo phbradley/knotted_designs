@@ -13,10 +13,11 @@ found here: https://rosettacommons.org/software/license-and-download
 # Disclaimers
 
 First, it's important to realize that back in the dark ages of protein design
-(pre 2020) it took many, many thousands of CPU hours to generate good
-de novo design models with novel topologies.
+(pre-2020, pre-hallucination, pre-diffusion), and with the fragment-based
+sampling approaches employed here, it took hundreds to thousands of CPU hours
+to generate good populations of de novo design models with novel topologies.
 This is because, in general, the approaches for backbone topology sampling
-were brute force random sampling of (for the examples here) helix lengths and
+were brute force random sampling of (for example) helix lengths and
 loop torsions. So we relied on
 many independent simulations, each several minutes long, to inefficiently explore
 the very large space of structures and sequences. All the calculations described
@@ -83,7 +84,7 @@ with the command
 
 A pre-compiled binary for linux is available here:
 
-...
+https://www.dropbox.com/s/zktq4yvfzvw5xtp/symdes.static.linuxgccrelease
 
 ## pre-built models
 
@@ -94,6 +95,14 @@ A large set of trefoil and pentafoil design models can be downloaded here:
 
 # Running the calculations:
 
+A typical command line might look something like:
+
+`./symdes.static.linuxgccrelease @trefoil_resampling_flags.txt`
+
+Multiple jobs could be launched with the same command line (on a computing cluster,
+for example) and they will share their work using temporary files
+created using the `-shared_output_tag` argument as a filename prefix.
+This is mainly important for score-based filtering of final design output.
 
 # Other relevant software:
 
