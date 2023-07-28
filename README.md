@@ -10,12 +10,14 @@ Before using this software, please obtain a license (free for academic users)
 for the Rosetta macromolecular modeling suite. Information on licenses can be
 found here: https://rosettacommons.org/software/license-and-download
 
-# Disclaimer
+# Disclaimers
 
 First, it's important to realize that back in the dark ages of protein design
-(pre 2020) it took many, many thousands of CPU hours to generate good design models.
-This is because the approaches for backbone topology sampling were essentially
-brute force random sampling of helix lengths and loop torsions. So we relied on
+(pre 2020) it took many, many thousands of CPU hours to generate good
+de novo design models with novel topologies.
+This is because, in general, the approaches for backbone topology sampling
+were brute force random sampling of (for the examples here) helix lengths and
+loop torsions. So we relied on
 many independent simulations, each several minutes long, to inefficiently explore
 the very large space of structures and sequences. All the calculations described
 in this paper were run on a large computing cluster.
@@ -62,8 +64,7 @@ backbone turn conformations.
 source code, implement the design calculations. In this folder are `symdes.cc`
 which is the main executable file, and a few supporting `*.hh` files. 
 
-# Download links for other large input files, precompiled executable, and
-60,000 pre-built models.
+# Download links for other large input files, precompiled executable, and 60,000 pre-built models.
 
 ## big_input
 
