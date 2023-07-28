@@ -73,7 +73,7 @@ Some of the inputs for the design calculation (for example, the file of
 backbone fragment torsion angles) are too big to host on github, so we
 combined them all into a big ZIP file, downloadable here:
 
-...
+https://www.dropbox.com/s/r3kqntd6bdtzy6b/big_input.tgz
 
 After downloading the file, move it into this folder and uncompress it, for example
 with the command
