@@ -73,7 +73,7 @@ Some of the inputs for the design calculation (for example, the file of
 backbone fragment torsion angles) are too big to host on github, so we
 combined them all into a big ZIP file, downloadable here:
 
-https://files.ipd.uw.edu/pub/knotted_protein_designs_natcomms_2023/big_input.tgz
+https://www.dropbox.com/s/r3kqntd6bdtzy6b/big_input.tgz?dl=0
 
 After downloading the file, move it into this folder and uncompress it, for example
 with the command
@@ -84,14 +84,13 @@ with the command
 
 A pre-compiled binary for linux is available here:
 
-https://files.ipd.uw.edu/pub/knotted_protein_designs_natcomms_2023/symdes.static.linuxgccrelease
+https://www.dropbox.com/s/zktq4yvfzvw5xtp/symdes.static.linuxgccrelease?dl=0
 
 ## pre-built models
 
 A large set of trefoil and pentafoil design models can be downloaded here:
 
-https://files.ipd.uw.edu/pub/knotted_protein_designs_natcomms_2023/knotted_design_models.tgz
-
+https://www.dropbox.com/scl/fi/pwc6qxf0lsovkhs33nvgf/knotted_designs_models.tgz?rlkey=sx8y4s3c0hed33r319ek5spzu&dl=0
 
 # Running the calculations:
 
